@@ -1,0 +1,35 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex: 0 0 50px;
+  background-color: grey;
+  height: 4.5rem;
+  padding-right: 2rem; }
+  footer #copyright-div {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer #copyright-div #details {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.2rem; }
+  footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55%;
+    margin-top: 1rem; }
+    footer ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: ease-in-out 0.2s; }
+    footer ul li a:hover {
+      color: white; }

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+<link rel="stylesheet" href="/css/chat_box.css">
+
+<h1 style="padding-top: 15px;">
+    Codeial | Profile
+</h1>
+
+<div style="padding-bottom: 10px;" id="container">
+    
+    <img id="profile-picture" src="<%=profile_user.avatar%>" alt="<%=profile_user.name%>"  width="200">
+
+    <% if(user.id == profile_user.id) { %>
+
+        <!-- if user matches, then show update form -->
+        <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST">
+            
+            <input type="text" name="name" placeholder="Your name" value="<%=profile_user.name%>" required>
+            <input type="email" name="email" placeholder="Your email" value="<%=profile_user.email%>" required>
+            <input type="file" name="avatar" placeholder="Profile Picture">
+            <input type="submit" value="Update">
+        </form>
+        
+
+    <% } else { %>
+
+        <p> <%= profile_user.name %> </p>
+
+        <p> <%= profile_user.email %>  </p>    
+
+        <a style="text-decoration: none;" href="/users/friend-request/?to_user=<%=profile_user._id%>&type=<%=shouldAdd%>">
+            <% if(shouldAdd=="Add") { %>
+                <i class="fas fa-plus-circle"></i>
+                Add friend
+            <% } else { %>
+                <i class="fas fa-minus-circle"></i>
+                Remove friend
+            <% } %>
+        </a>
+        <%- include('_chat_box') %>
+    <% } %>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<% if(locals.user) { %>
+    <script>
+        new ChatEngine('user-chat-box', '<%=locals.user.id%>', '<%=profile_user.id%>');
+    </script>
+<% } %>

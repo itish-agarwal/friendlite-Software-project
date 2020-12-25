@@ -1,0 +1,12 @@
+/* common style for all pages that inherit from the layout */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5; }
+  body #layout-main-user {
+    padding-left: 20px;
+    background-color: #c9c9ca;
+    margin: 1rem 1rem 5rem 1rem; }
+  body #layout-main {
+    height: 100%;
+    margin: 0; }

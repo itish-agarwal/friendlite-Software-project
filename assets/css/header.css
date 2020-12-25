@@ -1,0 +1,43 @@
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blue;
+  height: 5.3rem; }
+  header #upper-div {
+    width: 100%;
+    height: 65%;
+    text-align: center; }
+    header #upper-div #website-name-div {
+      height: 100%;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 600;
+      padding: 7px 0 0 0; }
+  header #lower-div {
+    width: 100%;
+    background-color: #c5e6fa;
+    height: 36%;
+    display: flex;
+    justify-content: space-between; }
+  header #options-div {
+    height: 100%;
+    width: 23rem; }
+  header .item {
+    height: 100%;
+    display: inline-block;
+    margin-right: 3rem;
+    padding-top: 3px; }
+    header .item a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.3rem; }
+    header .item a:hover {
+      color: #575353; }
+  header #back-div {
+    color: black;
+    font-size: 1.4rem;
+    margin-left: 4rem;
+    padding-top: 4px; }
+    header #back-div a i {
+      color: black; }
+    header #back-div a i:hover {
+      color: #575353; }

@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>
+            <% if(locals.user) { %>
+                <%= locals.user.name %>
+            <% } else { %>
+                <%= title %>
+            <% } %>
+        </title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- now we want to submit the data of the form in the form of a json object, and not directly -->
+        
+        <script src="https://kit.fontawesome.com/ef7b48db01.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        
+        
+        <!-- whenever there is a style tag in the body, it will automatically be shifted here into the head -->
+        <%- style %>
+    </head>
+    <body>
+
+        <!-- include header -->
+
+        <%- include('_header'); %>
+
+        
+
+        <% if(locals.user) { %>
+            <main id="layout-main-user">
+            <!-- now tell where the variable part will be  -->
+                <%- body %>
+            </main>
+        <% } else { %>
+            <main id="layout-main">
+                <%- body %>
+            </main>
+        <% } %>
+
+        <!-- include footer -->
+
+        <%- include('_footer'); %>
+
+        <!-- whenever there is a script tag in the body, it will automatically be shifted here after the body -->
+        <%- script %>
+
+
+        <script>
+            <% if(flash.success && flash.success.length>0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: '<%=flash.success%>',
+                    type: 'success',
+                    layout: 'bottomRight',
+                    timeout: 400
+                }).show();
+            <% } %>
+
+            <% if(flash.error && flash.error.length>0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: '<%=flash.error%>',
+                    type: 'error',
+                    layout: 'bottomRight',
+                    timeout: 400    
+                }).show();
+                
+            <% } %>
+
+        </script>        
+        
+    </body>
+</html>

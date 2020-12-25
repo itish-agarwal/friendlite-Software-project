@@ -1,0 +1,109 @@
+
+
+<% if(locals.user) { %>
+    <header>
+        <div id="upper-div">
+            <div id = "website-name-div">
+                <span id="website-name">
+                    Codeial
+                </span>
+            </div>
+        </div>
+        
+        <div id="lower-div">
+            <div id="back-div">
+                <a href="<%=locals.back%>">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+
+            <div id="options-div">
+
+                <% if(locals.user) { %> 
+                    <div class="item">
+                        <a href="/users/profile/<%=locals.user.id%>">
+                            <%= user.name %>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/users/sign-out">
+                            Sign Out
+                        </a>
+                    </div>
+                <% } else { %>
+                    <div class="item">
+                        <a href="/users/sign-in">
+                            Sign In
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/users/sign-up">
+                            Sign Up
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+    <div id = "navbar-options">
+        
+            <div id = "website-name-div">
+                <span id="website-name">
+                    Codeial
+                </span>
+            </div>
+            
+            <div id="options-div">
+                <% if(locals.user)  { %>
+                    
+                    <div class = "item">
+                        <a href="/users/profile/<%=locals.user.id%>">                
+                                <%= user.name %>                        
+                        </a>
+                    </div>
+
+                
+                    <div class="item">
+                        <a href = "/users/sign-out">                    
+                                Sign Out                        
+                        </a>
+                    </div>
+
+                <% } else { %>
+                    
+                    <div id="item">
+                    <a href = "/users/sign-up">
+            
+                            Sign Up
+            
+                    </a>
+                    </div>
+                
+                    <div id="item">
+                    <a href = "/users/sign-in">
+        
+                            Sign In
+        
+                    </a>
+                    </div>
+                    
+                <% } %>
+            </div>
+    </div> -->
+
+</header>
+<% } %>

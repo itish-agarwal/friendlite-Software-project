@@ -1,0 +1,26 @@
+
+<div id="user-chat-box">
+    <ul class="chat-messages-list" id="chat-messages-list-<%=locals.user._id%>-<%=profile_user._id%>">
+
+        <% for(message of messagesArray) { %>
+            <% if(message.type==2) { %>
+                <li id="message-<%=message.id%>" class="other-message">
+                    <span> <%= message.content %> </span>
+                </li>
+            <% } else { %>
+                <li id="message-<%=message.id%>" class="self-message">
+                    <span> <%= message.content %> </span>
+                    <a class="delete-message-button" href="/messages/destroy/<%=message.id%>">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                    <!-- <p > <%= message.time %> </p> -->
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+
+    <div id="chat-message-input-container">
+        <input id="chat-message-input" placeholder="Type here.....">
+        <button id="send-message"> Send </button>
+    </div>
+</div>

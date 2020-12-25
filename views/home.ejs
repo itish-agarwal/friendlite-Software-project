@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/chat_box.css">
+
+<div id = "home-container">
+
+    <% if(locals.user) { %>
+        <section id="feed-posts">
+                <!-- also put a check at the controller level -->
+            <h2 style="margin-top:0.9rem;"> Posts </h2>
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" cols="35" rows="3" placeholder="What's on your mind?....." required></textarea>
+                <br>
+                <input id="postBtn" type="submit" value="Post">
+            </form>
+
+
+            <h3> All posts </h3>
+            <div id="posts-list-container" style="padding-bottom: 3rem;">
+                <ul>
+                    <% for(post of posts) { %>                
+                        <%- include('_post') -%>
+                    <% } %>
+                </ul>
+                <hr>
+            </div>
+
+        </section>    
+        
+        <div id="right-container">  
+            <div class="users">                  
+                <h2> Friends </h2>
+                <% for(u of all_friends) { %>
+                    <% if(u.id != locals.user.id) { %>
+                    <p>
+                        <a href="/users/profile/<%=u.id%>">
+                            <%= u.name %>
+                        </a>
+                    </p>
+                    <% } %>
+                <% } %>
+            </div>
+
+            <div class="users">      
+                
+                <h2> Other users </h2>
+                <% for(u of all_non_friends) { %>
+                    <% if(u.id != locals.user.id) { %>
+                    <p>
+                        <a href="/users/profile/<%=u.id%>">
+                            <%= u.name %>
+                        </a>
+                    </p>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+
+    <% } %>
+
+    <!--render front page if user is not logged in-->
+    <% if(!locals.user) { %>
+        <div id="front-page-div">
+            <div id="image-div">
+                <img src="/images/front_page15.jpeg" alt="Codeial">
+            </div>
+            <div id="front-page-login">
+                <div id="form-container">
+                    <div id="name-div" class="one-div">
+                        <span id="name-span">
+                            Codeial
+                        </span>
+                    </div>
+
+                    <form action="/users/create-session" method="POST">
+                        <div class="one-div">
+                            <input class="inputs" type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="one-div">
+                            <input class="inputs" type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="one-div">
+                            <input id="submit-button" type="submit" value="Sign In">
+                        </div>
+                    </form>
+
+                    <div class="one-div" id="sign-in-with-google">
+                        <a href="/users/auth/google">
+                            Sign in with google
+                        </a>
+                    </div>
+                    <div class="one-div" id="forgot-password">
+                        <a href="/users/forgot-password">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <a style="text-decoration: none;" href="/users/sign-up">
+                        <div class="one-div" id="create-account-div">
+                            <input type="submit" id="create-account-button" value="Create new account">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    <% } %>
+
+
+</div>
+
+<script src="/js/home_post_comments.js"></script>
+<script src="/js/home_posts.js"></script>
+
+<script src="/js/toggle_likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function() {
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<% if(locals.user) { %>
+    <script>
+        new ChatEngine('user-chat-box', '<%=locals.user.email%>');
+    </script>
+<% } %>

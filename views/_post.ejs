@@ -1,0 +1,48 @@
+<li id="post-<%=post._id%>">
+    <p>                       
+        <%= post.content %>
+        <br>
+        <small> By </small>
+        <small style="display: inline-block; font-weight: bold;">
+            <%= post.user.name %>
+        </small>
+        <% if((locals.user) && (locals.user.id == post.user.id)) { %>
+            <br>
+            <small>
+                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
+                    Delete
+                </a>
+            </small>
+        <% } %>
+        <br>
+        <small>
+            <a style="text-decoration: none; font-size:0.94rem;" class="toggle-like-button" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                <i class="fas fa-thumbs-up"> </i> <%= post.likes.length %> 
+            </a>
+        </small>
+    </p>
+
+    <div class="post-comments">
+        <% if(locals.user) { %>
+
+            <form id="post-<%=post._id%>-comments-form" action="/comments/create" method="POST">
+
+                <input class="comment-input" type="text" name="content" placeholder="Comment....." required>
+                <!-- now we also need to send the id of the post to which this comment needs to be added
+                 -->
+
+                <input type="hidden" name="post" value="<%= post._id %>">
+                <input id="commentBtn" type="submit" value="Add">
+
+                </form>
+        <% } %>
+
+        <div class="post-comments-list" style="width:21rem; border-right: 1px solid rgb(250, 247, 247);">
+            <ul id = "post-comments-<%=post._id%>">
+                <% for(comment of post.comments) { %>
+                  <%- include('_comment') -%>
+                <% } %>
+            </ul>
+        </div>
+    </div>                    
+</li>

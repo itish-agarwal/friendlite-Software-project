@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  font-size: 1.05rem;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  border: none;
+  padding: 6px 7px;
+  border-radius: 4px;
+  border: 1px solid white; }
+
+#postBtn {
+  margin-top: 0.3rem;
+  cursor: pointer;
+  background-color: #1877f2;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  padding: 2.1px 6px; }
+
+#postBtn:hover {
+  background-color: #0d68e0; }
+
+#commentBtn {
+  cursor: pointer;
+  background-color: #1877f2;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 2.7px 6px;
+  font-size: 1rem;
+  border-radius: 2px; }
+
+#commentBtn:hover {
+  background-color: #0d68e0; }
+
+.comment-input {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  padding: 3px 5px;
+  width: 44%; }
+
+#home-container {
+  display: flex;
+  justify-content: space-between; }
+  #home-container #feed-posts {
+    width: 28%; }
+  #home-container #right-container {
+    width: 30%;
+    display: flex; }
+    #home-container #right-container .users {
+      width: 40%;
+      padding-left: 15px;
+      border-left: 2px solid #837f7f; }
+    #home-container #right-container .users p a {
+      color: #302e2e;
+      text-decoration: none;
+      font-size: 1.1rem; }
+    #home-container #right-container .users p a:hover {
+      color: black; }
+
+#new-post-form {
+  padding-bottom: 30px;
+  border-bottom: 2px solid black; }
+
+#front-page-div {
+  width: 100vw;
+  height: 94vh;
+  display: flex; }
+
+#image-div {
+  width: 64%;
+  background-color: cyan; }
+
+#image-div img {
+  height: 100%;
+  width: 100%; }
+
+#front-page-login {
+  width: 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#form-container {
+  width: 60%;
+  height: 40%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 7rem;
+  padding: 12px 0; }
+
+.one-div {
+  height: 12%;
+  width: 93%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px; }
+
+#name-div span {
+  color: white;
+  display: inline-block;
+  font-size: 3.3rem;
+  font-weight: 600; }
+
+#name-div {
+  background-image: linear-gradient(45deg, #534d96, #3e3e70);
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  margin-bottom: 0.5rem; }
+
+.inputs {
+  outline: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF url(/rsrc.php/v3/yO/r/YQNfPR9MJfx.png) repeat-x;
+  box-sizing: border-box;
+  border: 0.1rem solid #dddfe2;
+  border-radius: 5px;
+  padding: 0 10px; }
+
+.inputs:hover {
+  border: 0.1rem solid #1877f2;
+  box-shadow: 1.5px 2px 1px #b7d2f5; }
+
+#submit-button {
+  outline: none;
+  border: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  background-color: #1877f2;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 10px; }
+
+#submit-button:hover {
+  background-color: #0d68e0; }
+
+#sign-in-with-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  height: 7%;
+  margin-bottom: 0; }
+
+#sign-in-with-google a {
+  font-size: 1.1rem;
+  color: blue; }
+
+#forgot-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  height: 7%; }
+
+#forgot-password a {
+  font-size: 1.1rem;
+  color: blue; }
+
+#create-account-button {
+  outline: none;
+  border: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-top: 1.6rem;
+  width: 70%;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  background-color: #42b72a;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0 10px; }
+
+#create-account-button:hover {
+  background-color: #2da116; }
