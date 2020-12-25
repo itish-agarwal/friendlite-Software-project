@@ -9,8 +9,12 @@ const env = require('./environment');
 const usersSignInMailer = require('../mailers/registration_successful_mailer');
 
 //tell passport to use a new strategy for google auth
+console.log(env.google_client_id);
+console.log(env.google_client_secret);
+console.log(env.google_call_back_url);
 
 passport.use(new googleStrategy({
+    
     clientID: env.google_client_id,
     clientSecret: env.google_client_secret,
     callbackURL: env.google_call_back_url

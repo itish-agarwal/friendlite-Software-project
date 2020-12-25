@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="/css/chat_box.css">
 
 <div id = "home-container">
-
     <% if(locals.user) { %>
         <section id="feed-posts">
                 <!-- also put a check at the controller level -->
@@ -54,11 +53,11 @@
                 <% } %>
             </div>
         </div>
-
     <% } %>
 
     <!--render front page if user is not logged in-->
     <% if(!locals.user) { %>
+        
         <div id="front-page-div">
             <div id="image-div">
                 <img src="/images/front_page15.jpeg" alt="Codeial">
@@ -70,7 +69,6 @@
                             Codeial
                         </span>
                     </div>
-
                     <form action="/users/create-session" method="POST">
                         <div class="one-div">
                             <input class="inputs" type="email" name="email" placeholder="Email" required>
@@ -82,7 +80,6 @@
                             <input id="submit-button" type="submit" value="Sign In">
                         </div>
                     </form>
-
                     <div class="one-div" id="sign-in-with-google">
                         <a href="/users/auth/google">
                             Sign in with google
@@ -102,10 +99,7 @@
                 </div>
             </div>
         </div>
-
     <% } %>
-
-
 </div>
 
 <script src="/js/home_post_comments.js"></script>

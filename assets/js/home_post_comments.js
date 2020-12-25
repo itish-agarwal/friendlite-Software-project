@@ -10,6 +10,7 @@ class PostComments{
         this.postId = postId;
         this.postContainer = $(`#post-${postId}`);
         this.newCommentForm = $(`#post-${postId}-comments-form`);
+        
 
         this.createComment(postId);
 
@@ -42,7 +43,7 @@ class PostComments{
                         theme: 'relax',
                         text: "Comment published!",
                         type: 'success',
-                        layout: 'topRight',
+                        layout: 'bottomRight',
                         timeout: 400
                         
                     }).show();
@@ -96,7 +97,7 @@ class PostComments{
                         theme: 'relax',
                         text: "Deleted comment",
                         type: 'success',
-                        layout: 'topRight',
+                        layout: 'bottomRight',
                         timeout: 400
                         
                     }).show();

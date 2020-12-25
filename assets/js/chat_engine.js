@@ -33,9 +33,33 @@ class ChatEngine{
 
         });
 
+        document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+              // Cancel the default action, if needed
+                event.preventDefault();
+                let msg = $('#chat-message-input').val();
+                $('#chat-message-input').val("");
+                $('#chat-message-input').focus();
+                let d = Date(Date.now());
+                let time = d.toString();
+                time = time.substr(0, 8) + time.substr(11, 10);
+                console.log(time);
+                if (msg != ''){
+                    self.socket.emit('send_message', {
+                        message: msg,
+                        from_user_id: self.userId,
+                        to_user_id: self.profileUserId,
+                        messageId: '',
+                        chatroom: 'codeial'
+                    });
+                }
+            }
+          });
         // CHANGE :: send a message on clicking the send message button
         $('#send-message').click(function(){
             let msg = $('#chat-message-input').val();
+            $('#chat-message-input').val("");
+            $('#chat-message-input').focus();
             if (msg != ''){
                 self.socket.emit('send_message', {
                     message: msg,
@@ -58,7 +82,6 @@ class ChatEngine{
             if(data.from_user_id == self.userId) {
                 messageType = 'self-message';
             }
-            console.log("XXXXXXXXXXXXXXXXXXXXX - ", data.messageId);
 
             newMessage.append($('<span>', {
                 'html': data.message
@@ -69,7 +92,6 @@ class ChatEngine{
             if(messageType=='self-message') {
                 newMessage.append($(`<a class="delete-message-button" href="/messages/destroy/${data.messageId}"> <i class="fas fa-trash"></i> </a>`));
             }
-
 
             $(`#chat-messages-list-${data.from_user_id}-${data.to_user_id}`).prepend(newMessage);
             
