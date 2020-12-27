@@ -26,7 +26,7 @@ const developement = {
         //we need to establish the identity with which we will be sending the mail
         auth: {
             user: 'itishagarwal2000',
-            pass: 'ikercasillas@123'
+            pass: 'gmail@gulpfile123'
         }
     },
     google_client_id: '323843799837-g1rqef6pdgsa6uit693v3np0tm8j1nha.apps.googleusercontent.com',

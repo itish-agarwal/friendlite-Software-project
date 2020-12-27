@@ -1,5 +1,7 @@
-<link rel="stylesheet" href="/css/user_profile.css">
+<!-- <link rel="stylesheet" href="/css/user_profile.css">
 <link rel="stylesheet" href="/css/chat_box.css">
+
+
 
 <h1 style="padding-top: 15px;">
     Codeial | Profile
@@ -11,7 +13,6 @@
 
     <% if(user.id == profile_user.id) { %>
 
-        <!-- if user matches, then show update form -->
         <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST">
             
             <input type="text" name="name" placeholder="Your name" value="<%=profile_user.name%>" required>
@@ -47,4 +48,40 @@
     <script>
         new ChatEngine('user-chat-box', '<%=locals.user.id%>', '<%=profile_user.id%>');
     </script>
-<% } %>
+<% } %> -->
+
+
+<div id="body-container">
+    <div id="profile-container">
+        <div id="profile-pic-container">
+            <img src="<%=locals.user.avatar%>" alt="Not yet set">
+        </div>
+
+        <div id="name-container">
+            <span>
+                <%= profile_user.name %>
+            </span>
+        </div>
+
+        <div id="email-container">
+            <span>
+                <%= profile_user.email %>
+            </span>
+        </div>
+
+        <% if(locals.user.id != profile_user.id) { %>
+            <div id="add-friend-container">
+                <a href="/users/friend-request/?to_user=<%=profile_user._id%>&type=<%=shouldAdd%>">
+                    <% if(shouldAdd=="Add") { %>
+                        <i class="fas fa-plus-circle"></i>
+                        Add friend
+                    <% } else { %>
+                        <i class="fas fa-minus-circle"></i>
+                        Remove friend
+                    <% } %>
+                </a>
+            </div>         
+        <% } %>
+
+    </div>
+</div>
