@@ -146,11 +146,12 @@ module.exports.signUp = function(req, res) {
 
 //render sign in page
 module.exports.signIn = function(req, res) {
+    console.log("oooooooooooooooooooooooo");
     if(req.isAuthenticated()) {
-        return res.redirect('/users/profile');
+        return res.redirect('/');
     }
     setTimeout(function() {
-        return res.render('home', {
+        return res.render('user_sign_in', {
             title: "Codeial | Sign In",
             back: '/'
         });

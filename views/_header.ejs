@@ -1,109 +1,27 @@
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
+      <h1 class="logo mr-auto"><a href="/"> Codeial </a></h1>
 
-<% if(locals.user) { %>
-    <header>
-        <div id="upper-div">
-            <div id = "website-name-div">
-                <span id="website-name">
-                    Codeial
-                </span>
-            </div>
-        </div>
-        
-        <div id="lower-div">
-            <div id="back-div">
-                <a href="<%=locals.back%>">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
 
-            <div id="options-div">
+          <% if(!locals.user) { %>
 
-                <% if(locals.user) { %> 
-                    <div class="item">
-                        <a href="/users/profile/<%=locals.user.id%>">
-                            <%= user.name %>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="/users/sign-out">
-                            Sign Out
-                        </a>
-                    </div>
-                <% } else { %>
-                    <div class="item">
-                        <a href="/users/sign-in">
-                            Sign In
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="/users/sign-up">
-                            Sign Up
-                        </a>
-                    </div>
-                <% } %>
-            </div>
-        </div>
-    
+            <li><a href="#about">About</a></li>
 
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="<%=locals.back%>">Back</a></li>
+          <% } else { %>
+            <li><a href="/users/profile/<%=locals.user.id%>">Profile</a></li>
 
+            <li><a href="/users/sign-out">Sign Out</a></li>
 
+            <li><a href="/">Back</a></li>
+          <% } %>
+        </ul>
+      </nav>
 
-
-
-
-
-
-
-<!-- 
-
-
-
-    <div id = "navbar-options">
-        
-            <div id = "website-name-div">
-                <span id="website-name">
-                    Codeial
-                </span>
-            </div>
-            
-            <div id="options-div">
-                <% if(locals.user)  { %>
-                    
-                    <div class = "item">
-                        <a href="/users/profile/<%=locals.user.id%>">                
-                                <%= user.name %>                        
-                        </a>
-                    </div>
-
-                
-                    <div class="item">
-                        <a href = "/users/sign-out">                    
-                                Sign Out                        
-                        </a>
-                    </div>
-
-                <% } else { %>
-                    
-                    <div id="item">
-                    <a href = "/users/sign-up">
-            
-                            Sign Up
-            
-                    </a>
-                    </div>
-                
-                    <div id="item">
-                    <a href = "/users/sign-in">
-        
-                            Sign In
-        
-                    </a>
-                    </div>
-                    
-                <% } %>
-            </div>
-    </div> -->
-
-</header>
-<% } %>
+    </div>
+  </header>

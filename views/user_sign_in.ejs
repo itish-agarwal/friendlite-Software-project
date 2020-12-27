@@ -1,4 +1,72 @@
-<link rel="stylesheet" href="/css/user_sign_in.css">
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1> Sign In </h1>
+
+          <div id="form-container"> 
+            <form id="sign-up-form" action="/users/create-session" method="POST">
+              <div class="one-div">
+                  <input class="inputs" type="email" name="email" placeholder="Enter email" required>
+              </div>
+              <div class="one-div">
+                  <input class="inputs" type="password" name="password" placeholder="Enter password" required>
+              </div>
+              <div style="margin-bottom: 10px;"" class="one-div">
+                <a id="forgot-password-link" href="/users/forgot-password"> Forgot password? </a>
+              </div>
+              <div id="options-div" class="one-div">
+                <div id="options-container">
+                  <div id="sign-in-div">
+                    <input id="submit-button" type="submit" value="Sign In">
+                  </div>
+                  <div id="line-div">
+
+                  </div>
+                  <div id="google-sign-in-div">
+                    <a href="/users/auth/google">
+                      <img src="/images/google2.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+<!--               
+              <div class="one-div">
+                  <input id="submit-button" type="submit" value="Sign In"> 
+                  <span id="line"> </span>
+              </div> -->
+            </form>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <link rel="stylesheet" href="/css/user_sign_in.css">
 
 <h1> Sign In </h1>
 
@@ -13,4 +81,4 @@
 </p>
 <p>
     <a href="/users/forgot-password">Forgot password?</a>
-</p>
+</p> -->
