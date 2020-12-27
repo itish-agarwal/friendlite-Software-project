@@ -4,43 +4,119 @@
 
     <% if(locals.user) { %>
       <div id = "home-container">
-        <section id="left-container">
-          
-          <div id="feed-posts">
+       <div id="dashboard-div">
 
-            <h2> Posts </h2>
-            <form action="/posts/create" id="new-post-form" method="POST">
-              <textarea name="content" cols="35" rows="3" placeholder="What's on your mind?....." required></textarea>
-              <br>
-              <input id="postBtn" type="submit" value="Post">
-            </form>
-            
-            <hr>
+        <div id="me-container">
+          <div id="dp-container">
+            <img src="<%=locals.user.avatar%>">
+          </div>
+          <div id="name-container">
+            <span> 
+              <a href="/users/profile/<%= locals.user.id %>">
+                <%= locals.user.name %>
+              </a>
+            </span>
+          </div>
+        </div>
 
+        <div id="menu-name-container">
+          <span>
+            MENUS
+          </span>
+        </div>
+
+        <div id="menu-div">
+
+
+          <div class="item">
+            <a href="#" class="a-tag-link active">
+              <div class="icon-div">
+                <i class="fas fa-home">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Newsfeed
+                </span>
+              </div>
+            </a>
           </div>
 
-          <h3> All Posts </h3>
 
-          <div id="posts-list-container">
-            <ul>
-              <% for(post of posts) { %>
-                <%- include('_post') %>
-              <% } %>
-            </ul>
-            <hr>
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class="fas fa-envelope-open">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Your posts
+                </span>
+              </div>
+            </a>
           </div>
 
-        </section>
-        <section id="right-container">
-        
-          <div id="friends-div">
-            <h2> Friends </h2>
-          </div>
-          <div id="other-users-div">
 
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class ="fas fa-user-friends">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Friends
+                </span>
+              </div>
+            </a>
           </div>
 
-        </section>
+          <div class="item">
+            <a href="/users/profile/<%=locals.user.id%>" class="a-tag-link">
+              <div class="icon-div">
+                <i class ="fas fa-address-card">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  My profile
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class="fas fa-door-open">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Sign Out
+                </span>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+
+
+       </div>
+       <div id="feed-posts">
+
+       </div>
+
+       <div id="user-friends">
+
+       </div>
 
       </div>
    
@@ -53,7 +129,7 @@
             <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
               <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9 text-center">
-                  <h1> Codeial </h1>
+                  <h1> Friendsara </h1>
                   <h2> See what your friends are upto! </h2>
                 </div>
               </div>

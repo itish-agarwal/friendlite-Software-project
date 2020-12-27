@@ -22,7 +22,7 @@ router.post('/create', usersController.create);
 //create a session
 router.post('/create-session', /*middleware*/ passport.authenticate(
     'local',
-    {failureRedirect: '/'},
+    {failureRedirect: '/users/sign-in'},
 ), usersController.createSession);
 
 //sign-out

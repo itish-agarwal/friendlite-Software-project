@@ -101,7 +101,6 @@ module.exports.update = async function(req, res) {
                     if(req.file) {
 
                         if(user.avatar) {
-
                             //delete the avatar (to save the space in avatars folder);
                             if(fs.existsSync(path.join(__dirname, '..', user.avatar))) {
                             // user.avatar stores /uploads/users/avatars/filename-date
@@ -134,7 +133,7 @@ module.exports.update = async function(req, res) {
 //render sign up page
 module.exports.signUp = function(req, res) {
     if(req.isAuthenticated()) {
-        return res.redirect('/users/profile');
+        return res.redirect('/');
     }
     setTimeout(function() {
         return res.render('user_sign_up', {
@@ -146,18 +145,14 @@ module.exports.signUp = function(req, res) {
 
 //render sign in page
 module.exports.signIn = function(req, res) {
-    console.log("oooooooooooooooooooooooo");
     if(req.isAuthenticated()) {
         return res.redirect('/');
     }
-    setTimeout(function() {
-        return res.render('user_sign_in', {
-            title: "Codeial | Sign In",
-            back: '/'
-        });
-    }, T+90);
+    return res.render('user_sign_in', {
+        title: "Codeial | Sign In",
+        back: '/'
+    });
 }
-
 
 //create a user
 module.exports.create = function(req, res) {
@@ -201,29 +196,22 @@ module.exports.create = function(req, res) {
 }
 
 
-
 //sign in and create a session for the user
 module.exports.createSession = function(req, res) {
-
     req.flash('success', 'Logged in successfully');
     //now this message needs to be given to the response->use a middleware
     //create a new middleware in config folder
-    setTimeout(function() {
-        return res.redirect('/');
-    }, T+900);
+    return res.redirect('/');
+
 }
 
 
 //sign-out the user
 module.exports.destroySession = function(req, res) {
-    
     //built-in function to destroy cookie
     req.logout();
     req.flash('success', 'Logged out successfully');
-    setTimeout(function() {
-        return res.redirect('/');
-    }, T+690);
-
+    return res.redirect('/');    
 }
 
 

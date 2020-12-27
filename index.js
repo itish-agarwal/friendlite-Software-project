@@ -48,7 +48,7 @@ app.use(sassMiddleware({
 }));
 
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 
 //setting up the cookie-parser
 app.use(cookieParser());
