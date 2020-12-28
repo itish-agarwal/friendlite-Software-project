@@ -52,9 +52,112 @@
 
 
 <div id="body-container">
+    <div id="dashboard-div">
+
+        <div id="me-container">
+          <div id="dp-container">
+            <img src="<%=locals.user.avatar%>">
+          </div>
+          <div id="name-container">
+            <span> 
+              <a href="/users/profile/<%= locals.user.id %>">
+                <%= locals.user.name %>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div id="menu-name-container">
+          <span>
+            MENUS
+          </span>
+        </div>
+
+        <div id="menu-div">
+
+
+          <div class="item">
+            <a href="/" class="a-tag-link">
+              <div class="icon-div">
+                <i class="fas fa-home">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Newsfeed
+                </span>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class="fas fa-envelope-open">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Your posts
+                </span>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class ="fas fa-user-friends">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Friends
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="/users/profile/<%=locals.user.id%>" class="a-tag-link active">
+              <div class="icon-div">
+                <i class ="fas fa-address-card">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  My profile
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="#" class="a-tag-link">
+              <div class="icon-div">
+                <i class="fas fa-door-open">
+
+                </i>
+              </div>
+              <div class="actual-option">
+                <span>
+                  Sign Out
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+    </div>
+
     <div id="profile-container">
         <div id="profile-pic-container">
-            <img src="<%=locals.user.avatar%>" alt="Not yet set">
+            <img src="<%=profile_user.avatar%>">
         </div>
 
         <div id="name-container">
@@ -81,7 +184,15 @@
                     <% } %>
                 </a>
             </div>         
+        <% } else { %>
+            <div id="form-container">
+                <form action="/users/update/<%=locals.user.id%>" enctype="multipart/form-data" method="POST">
+                    <input type="text" name="name" placeholder="Your name" value="<%=locals.user.name%>" required>
+                    <input type="email" name="email" placeholder="Your email" value="<%=locals.user.email%>" required>
+                    <input type="file" name="avatar" placeholder="Profile Picture">
+                    <input type="submit" value="Update">
+                </form>
+            </div>
         <% } %>
-
     </div>
 </div>

@@ -15,10 +15,9 @@
     height: 100%;
     width: 53%;
     background-color: lightgrey; }
-  #home-container #user-friends {
+  #home-container #display-users-div {
     height: 100%;
-    width: 23%;
-    background-color: brown; }
+    width: 23%; }
 
 #dashboard-div #me-container {
   height: 350px;
@@ -88,3 +87,60 @@
     color: #3535f3; }
   #dashboard-div #menu-div .a-tag-link:hover {
     color: black; }
+
+#display-users-div {
+  background-image: linear-gradient(-120deg, #b2bdc1, #d0d9e0, #e7ebec);
+  padding-top: 4rem;
+  border-radius: 0 7px 7px 0; }
+  #display-users-div #friends-div {
+    width: 100%;
+    height: 50%; }
+    #display-users-div #friends-div #heading-friends {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 15px; }
+      #display-users-div #friends-div #heading-friends i {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 10px; }
+      #display-users-div #friends-div #heading-friends span {
+        display: inline-block;
+        font-size: 1.62rem;
+        font-weight: bold; }
+    #display-users-div #friends-div #friends-list-div {
+      width: 100%; }
+      #display-users-div #friends-div #friends-list-div .user-friend-div {
+        width: 100%;
+        padding: 8px 0; }
+        #display-users-div #friends-div #friends-list-div .user-friend-div a {
+          display: inline-block;
+          font-size: 1.3rem;
+          padding-left: 20px; }
+  #display-users-div #non-friends-div {
+    width: 100%;
+    height: 50%; }
+    #display-users-div #non-friends-div #heading-non-friends {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 15px; }
+      #display-users-div #non-friends-div #heading-non-friends i {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 10px; }
+      #display-users-div #non-friends-div #heading-non-friends span {
+        display: inline-block;
+        font-size: 1.62rem;
+        font-weight: bold; }
+    #display-users-div #non-friends-div #non-friends-list-div {
+      width: 100%; }
+      #display-users-div #non-friends-div #non-friends-list-div .user-friend-div {
+        width: 100%;
+        padding: 8px 0; }
+        #display-users-div #non-friends-div #non-friends-list-div .user-friend-div a {
+          display: inline-block;
+          font-size: 1.3rem;
+          padding-left: 20px; }

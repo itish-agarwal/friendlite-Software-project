@@ -1,13 +1,19 @@
 #body-container {
-  width: 80%;
-  height: 100vh;
+  width: 96%;
+  height: 90vh;
   margin: auto;
   margin-top: 6.8rem;
-  padding-top: 35px;
   margin-bottom: 2.5rem;
   background-image: linear-gradient(120deg, #8e9eab, #eef2f3);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 2px; }
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-around; }
+  #body-container #dashboard-div {
+    height: 100%;
+    width: 24%;
+    border-radius: 7px 0 0 7px;
+    background-image: linear-gradient(-120deg, #e7ebec, #d0d9e0, #98a3a6); }
   #body-container #profile-container {
     height: 500px;
     width: 80%;
@@ -25,7 +31,7 @@
       #body-container #profile-container #profile-pic-container img {
         height: 100%;
         width: 100%;
-        background-color: rgba(248, 248, 248, 0.1); }
+        background-color: #e0dcdc; }
     #body-container #profile-container #name-container {
       padding: 8px; }
       #body-container #profile-container #name-container span {
@@ -38,3 +44,100 @@
         color: #5c5cec; }
       #body-container #profile-container #add-friend-container a:hover {
         color: #2727e9; }
+    #body-container #profile-container #form-container {
+      margin-top: 18px; }
+      #body-container #profile-container #form-container input {
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        padding: 6px 9px;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        border-radius: 3px; }
+      #body-container #profile-container #form-container input:hover {
+        border: 1px solid grey;
+        box-shadow: 2px 1.5px 1px #b8b3b3; }
+      #body-container #profile-container #form-container input[type="email"] {
+        width: 17rem; }
+      #body-container #profile-container #form-container input[type="submit"] {
+        background-color: #1877f2;
+        cursor: pointer;
+        color: white;
+        font-weight: bold; }
+      #body-container #profile-container #form-container input[type="submit"]:hover {
+        background-color: #0d68e0;
+        box-shadow: 2px 1.5px 1px #e4dddd;
+        border: 1px solid transparent; }
+      #body-container #profile-container #form-container input[type="file"] {
+        background-image: linear-gradient(90deg, #8e9eab, #eef2f3);
+        border: 1px solid black;
+        padding: 4px; }
+
+#dashboard-div #me-container {
+  height: 350px;
+  width: 80%;
+  margin: auto;
+  margin-top: 2.4rem;
+  text-align: center;
+  padding: 40px 0 0 0; }
+  #dashboard-div #me-container #dp-container {
+    width: 150px;
+    height: 150px;
+    margin: auto; }
+    #dashboard-div #me-container #dp-container img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%; }
+  #dashboard-div #me-container #name-container {
+    padding: 20px; }
+    #dashboard-div #me-container #name-container span {
+      display: inline-block;
+      font-size: 1.5rem; }
+      #dashboard-div #me-container #name-container span a {
+        color: #424040; }
+      #dashboard-div #me-container #name-container span a:hover {
+        color: black; }
+
+#dashboard-div #menu-name-container {
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 0.6rem; }
+  #dashboard-div #menu-name-container span {
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+#dashboard-div #menu-div {
+  width: 80%;
+  height: 400px;
+  margin: auto; }
+  #dashboard-div #menu-div .a-tag-link {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    color: #494646;
+    padding-left: 2px;
+    justify-content: space-around; }
+    #dashboard-div #menu-div .a-tag-link .icon-div {
+      height: 100%;
+      width: 16%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #dashboard-div #menu-div .a-tag-link .icon-div i {
+        display: inline-block;
+        font-size: 1.36rem; }
+    #dashboard-div #menu-div .a-tag-link .actual-option {
+      height: 100%;
+      width: 82%;
+      display: flex;
+      align-items: center; }
+      #dashboard-div #menu-div .a-tag-link .actual-option span {
+        display: inline-block;
+        padding-left: 4px;
+        width: 100%;
+        font-size: 1.1rem; }
+  #dashboard-div #menu-div .active {
+    color: #3535f3; }
+  #dashboard-div #menu-div .a-tag-link:hover {
+    color: black; }

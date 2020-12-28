@@ -110,11 +110,66 @@
 
 
        </div>
+       <!--dashboard-div ends here-->
+
        <div id="feed-posts">
 
        </div>
 
-       <div id="user-friends">
+
+
+       <div id="display-users-div">
+
+          <div id="friends-div">
+
+            <div id="heading-friends">
+              <i class="fas fa-user-friends">
+
+              </i>
+              <span>
+                Friends
+              </span>
+            </div>
+
+            <div id="friends-list-div">
+              <% for(u of all_friends) { %>
+                <% if(u.id != locals.user.id) { %>
+                  <div class="user-friend-div">
+                    <!-- <i class="fas fa-paper-plane">
+
+                    </i> -->
+                    <a href="/users/profile/<%= u.id %>">
+                      <%= u.name %>
+                    </a>
+                  </div>
+                <% } %>
+              <% } %>
+            </div>
+          </div>
+
+          <div id="non-friends-div">
+            <div id="heading-non-friends">
+              <i class="fas fa-user-friends">
+
+              </i>
+              <span>
+                Other users
+              </span>
+            </div>
+
+            <div id="non-friends-list-div">
+              <% for(u of all_non_friends) { %>
+                <% if(u.id != locals.user.id) { %>
+                  <div class="user-friend-div">
+                    <a href="/users/profile/<%= u.id %>">
+                      <%= u.name %>
+                    </a>
+                  </div>
+                <% } %>
+              <% } %>
+            </div>
+
+          </div>
 
        </div>
 
