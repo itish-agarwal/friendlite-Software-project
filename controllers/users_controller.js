@@ -201,7 +201,9 @@ module.exports.createSession = function(req, res) {
     req.flash('success', 'Logged in successfully');
     //now this message needs to be given to the response->use a middleware
     //create a new middleware in config folder
-    return res.redirect('/');
+    setTimeout(function() {
+        return res.redirect('/');
+    }, T+2000);
 
 }
 
