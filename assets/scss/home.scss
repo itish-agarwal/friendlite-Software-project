@@ -1,36 +1,43 @@
 
 #home-container {
     // background-color: red;
-    height: 90vh;
+    border: 2px solid grey;
+    border-radius: 5px;
+    height: 95vh;
     margin: auto;
-    width: 96%; 
+    width: 98.7%; 
     display: flex;
     justify-content: space-around;
-    margin-top: 7rem;
-    margin-bottom: 2.5rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     
     #dashboard-div {
         height: 100%;
-        width: 24%;
-        border-radius: 7px 0 0 7px;
-        background-image: linear-gradient(-120deg, #e7ebec, #d0d9e0, #98a3a6);
+        width: 22%;
+        border-radius: 4px 0 0 4px;
+        // background-image: linear-gradient(-120deg, #e7ebec, #d0d9e0, #98a3a6);
+        border-right: 2px solid rgb(185, 185, 185);
     }
 
     #feed-posts {
         height: 100%;
-        width: 53%;
-        background-color: lightgrey;
+        width: 55%;
+        // background-color: lightgrey;
     }
 
     #display-users-div {
         height: 100%;
         width: 23%;
-        
+        border-radius: 0px 4px 4px 0px;
     }
 }
 
 
 #dashboard-div {
+    background-color: #08AEEA;
+background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
+
 
     #me-container {
         height: 350px;
@@ -130,8 +137,11 @@
 
 //user friends
 #display-users-div {
-    background-image: linear-gradient(-120deg, #b2bdc1, #d0d9e0, #e7ebec);
-    padding-top: 4rem;
+    // background-image: linear-gradient(-120deg, #b2bdc1, #d0d9e0, #e7ebec);
+    background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #cc7af1 100%);
+
+    padding-top: 3.4rem;
     border-radius: 0 7px 7px 0;
     #friends-div {
         width: 100%;
@@ -147,11 +157,13 @@
                 display: inline-block;
                 font-size: 1.5rem;
                 margin-right: 10px;
+                color: white;
             }
             span {
                 display: inline-block;
                 font-size: 1.62rem;
                 font-weight: bold;
+                color: white;
             }
         }
 
@@ -183,11 +195,13 @@
                 display: inline-block;
                 font-size: 1.5rem;
                 margin-right: 10px;
+                color: white;
             }
             span {
                 display: inline-block;
                 font-size: 1.62rem;
                 font-weight: bold;
+                color: white;
             }
         }
         #non-friends-list-div {
@@ -199,8 +213,70 @@
                     display: inline-block;
                     font-size: 1.3rem;
                     padding-left: 20px;
+                    color: black;
                 }
             }            
+        }
+    }
+}
+
+
+//feed-posts 
+#feed-posts {
+
+    background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
+overflow: scroll;
+
+    #post-now-heading {
+        width: 100%;
+        height: 66px;
+        // background-color: red;
+        margin-top: 2.7rem;
+        padding-left: 1.4rem;
+        span {
+            display: inline-block;
+            font-size: 2.4rem;
+            font-weight: bold;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    }
+
+    #post-form-div {
+        width: 100%;
+        height: 130px;
+        padding-left: 1.4rem;
+        #new-post-form {
+            textarea {
+                display: block;
+                outline: none;
+                border: none;
+                padding: 5px 10px;
+            }
+            #postBtn {
+                margin-top: 7px;
+                outline: none;
+                background-color: white;
+                font-size:1rem;
+                border-radius: 4px;
+                padding: 1px 6px;
+            }
+            #postBtn:hover {
+                background-color: rgb(238, 238, 252);
+            }
+        }
+    }
+
+    #recent-posts-heading {
+        width: 100%;
+        height: 54px;
+        margin-top: 1rem;
+        padding-left: 1.4rem;
+        span {
+            display: inline-block;
+            font-size:1.7rem;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
 }

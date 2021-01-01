@@ -112,7 +112,39 @@
        </div>
        <!--dashboard-div ends here-->
 
+
+
+
        <div id="feed-posts">
+        <div id="post-now-heading">
+          <span>
+            Post
+          </span>
+        </div>
+
+
+        <!--form-->
+        <div id="post-form-div">
+          <form action="/posts/create" id="new-post-form" method="POST">
+            <textarea name="content" cols="50" rows="3" placeholder="What's on your mind?....." required></textarea>
+            <input id="postBtn" type="submit" value="Post">
+          </form>
+        </div>      
+        <!--recent posts-->
+        
+        <div id="recent-posts-heading">
+          <span>
+            Recent posts
+          </span>
+        </div>
+        <div id="posts-list-container" style="padding-bottom: 3rem;">
+          <ul>
+              <% for(post of posts) { %>                
+                  <%- include('_post') -%>
+              <% } %>
+          </ul>
+          <hr>
+      </div>
 
        </div>
 

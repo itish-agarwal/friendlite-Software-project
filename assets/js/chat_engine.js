@@ -1,3 +1,4 @@
+
 class ChatEngine{
 
     constructor(chatBoxId, userId, profileUserId){
@@ -5,7 +6,6 @@ class ChatEngine{
         this.userId = userId;
         this.profileUserId = profileUserId;
 
-        console.log("URASSRRRRRRRRRRRRRRRRRRRRRRRRRRR");
 
         this.socket = io.connect('http://localhost:5000');
 

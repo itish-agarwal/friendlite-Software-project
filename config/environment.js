@@ -38,7 +38,8 @@ const developement = {
         options: {
             stream: accessLogStream
         }
-    }
+    },
+    socket_io_path: 'http://localhost:5000'
 }
 
 const production = {
@@ -69,7 +70,8 @@ const production = {
         options: {
             stream: accessLogStream
         }
-    }
+    },
+    socket_io_path: 'http://100.27.26.188:8000'
 }
 
 

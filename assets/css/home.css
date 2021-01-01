@@ -1,96 +1,101 @@
 #home-container {
-  height: 90vh;
+  border: 2px solid grey;
+  border-radius: 5px;
+  height: 95vh;
   margin: auto;
-  width: 96%;
+  width: 98.7%;
   display: flex;
   justify-content: space-around;
-  margin-top: 7rem;
-  margin-bottom: 2.5rem; }
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); }
   #home-container #dashboard-div {
     height: 100%;
-    width: 24%;
-    border-radius: 7px 0 0 7px;
-    background-image: linear-gradient(-120deg, #e7ebec, #d0d9e0, #98a3a6); }
+    width: 22%;
+    border-radius: 4px 0 0 4px;
+    border-right: 2px solid #b9b9b9; }
   #home-container #feed-posts {
     height: 100%;
-    width: 53%;
-    background-color: lightgrey; }
+    width: 55%; }
   #home-container #display-users-div {
     height: 100%;
-    width: 23%; }
+    width: 23%;
+    border-radius: 0px 4px 4px 0px; }
 
-#dashboard-div #me-container {
-  height: 350px;
-  width: 80%;
-  margin: auto;
-  margin-top: 2.4rem;
-  text-align: center;
-  padding: 40px 0 0 0; }
-  #dashboard-div #me-container #dp-container {
-    width: 150px;
-    height: 150px;
-    margin: auto; }
-    #dashboard-div #me-container #dp-container img {
-      height: 100%;
-      width: 100%;
-      border-radius: 50%; }
-  #dashboard-div #me-container #name-container {
-    padding: 20px; }
-    #dashboard-div #me-container #name-container span {
-      display: inline-block;
-      font-size: 1.5rem; }
-      #dashboard-div #me-container #name-container span a {
-        color: #424040; }
-      #dashboard-div #me-container #name-container span a:hover {
-        color: black; }
-
-#dashboard-div #menu-name-container {
-  width: 80%;
-  height: 40px;
-  margin: auto;
-  margin-bottom: 0.6rem; }
-  #dashboard-div #menu-name-container span {
-    font-size: 1.5rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-
-#dashboard-div #menu-div {
-  width: 80%;
-  height: 400px;
-  margin: auto; }
-  #dashboard-div #menu-div .a-tag-link {
-    display: flex;
-    height: 50px;
-    width: 100%;
-    color: #494646;
-    padding-left: 2px;
-    justify-content: space-around; }
-    #dashboard-div #menu-div .a-tag-link .icon-div {
-      height: 100%;
-      width: 16%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      #dashboard-div #menu-div .a-tag-link .icon-div i {
-        display: inline-block;
-        font-size: 1.36rem; }
-    #dashboard-div #menu-div .a-tag-link .actual-option {
-      height: 100%;
-      width: 82%;
-      display: flex;
-      align-items: center; }
-      #dashboard-div #menu-div .a-tag-link .actual-option span {
-        display: inline-block;
-        padding-left: 4px;
+#dashboard-div {
+  background-color: #08AEEA;
+  background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0); }
+  #dashboard-div #me-container {
+    height: 350px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.4rem;
+    text-align: center;
+    padding: 40px 0 0 0; }
+    #dashboard-div #me-container #dp-container {
+      width: 150px;
+      height: 150px;
+      margin: auto; }
+      #dashboard-div #me-container #dp-container img {
+        height: 100%;
         width: 100%;
-        font-size: 1.1rem; }
-  #dashboard-div #menu-div .active {
-    color: #3535f3; }
-  #dashboard-div #menu-div .a-tag-link:hover {
-    color: black; }
+        border-radius: 50%; }
+    #dashboard-div #me-container #name-container {
+      padding: 20px; }
+      #dashboard-div #me-container #name-container span {
+        display: inline-block;
+        font-size: 1.5rem; }
+        #dashboard-div #me-container #name-container span a {
+          color: #424040; }
+        #dashboard-div #me-container #name-container span a:hover {
+          color: black; }
+  #dashboard-div #menu-name-container {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 0.6rem; }
+    #dashboard-div #menu-name-container span {
+      font-size: 1.5rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  #dashboard-div #menu-div {
+    width: 80%;
+    height: 400px;
+    margin: auto; }
+    #dashboard-div #menu-div .a-tag-link {
+      display: flex;
+      height: 50px;
+      width: 100%;
+      color: #494646;
+      padding-left: 2px;
+      justify-content: space-around; }
+      #dashboard-div #menu-div .a-tag-link .icon-div {
+        height: 100%;
+        width: 16%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #dashboard-div #menu-div .a-tag-link .icon-div i {
+          display: inline-block;
+          font-size: 1.36rem; }
+      #dashboard-div #menu-div .a-tag-link .actual-option {
+        height: 100%;
+        width: 82%;
+        display: flex;
+        align-items: center; }
+        #dashboard-div #menu-div .a-tag-link .actual-option span {
+          display: inline-block;
+          padding-left: 4px;
+          width: 100%;
+          font-size: 1.1rem; }
+    #dashboard-div #menu-div .active {
+      color: #3535f3; }
+    #dashboard-div #menu-div .a-tag-link:hover {
+      color: black; }
 
 #display-users-div {
-  background-image: linear-gradient(-120deg, #b2bdc1, #d0d9e0, #e7ebec);
-  padding-top: 4rem;
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #cc7af1 100%);
+  padding-top: 3.4rem;
   border-radius: 0 7px 7px 0; }
   #display-users-div #friends-div {
     width: 100%;
@@ -104,11 +109,13 @@
       #display-users-div #friends-div #heading-friends i {
         display: inline-block;
         font-size: 1.5rem;
-        margin-right: 10px; }
+        margin-right: 10px;
+        color: white; }
       #display-users-div #friends-div #heading-friends span {
         display: inline-block;
         font-size: 1.62rem;
-        font-weight: bold; }
+        font-weight: bold;
+        color: white; }
     #display-users-div #friends-div #friends-list-div {
       width: 100%; }
       #display-users-div #friends-div #friends-list-div .user-friend-div {
@@ -130,11 +137,13 @@
       #display-users-div #non-friends-div #heading-non-friends i {
         display: inline-block;
         font-size: 1.5rem;
-        margin-right: 10px; }
+        margin-right: 10px;
+        color: white; }
       #display-users-div #non-friends-div #heading-non-friends span {
         display: inline-block;
         font-size: 1.62rem;
-        font-weight: bold; }
+        font-weight: bold;
+        color: white; }
     #display-users-div #non-friends-div #non-friends-list-div {
       width: 100%; }
       #display-users-div #non-friends-div #non-friends-list-div .user-friend-div {
@@ -143,4 +152,48 @@
         #display-users-div #non-friends-div #non-friends-list-div .user-friend-div a {
           display: inline-block;
           font-size: 1.3rem;
-          padding-left: 20px; }
+          padding-left: 20px;
+          color: black; }
+
+#feed-posts {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
+  overflow: scroll; }
+  #feed-posts #post-now-heading {
+    width: 100%;
+    height: 66px;
+    margin-top: 2.7rem;
+    padding-left: 1.4rem; }
+    #feed-posts #post-now-heading span {
+      display: inline-block;
+      font-size: 2.4rem;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif; }
+  #feed-posts #post-form-div {
+    width: 100%;
+    height: 130px;
+    padding-left: 1.4rem; }
+    #feed-posts #post-form-div #new-post-form textarea {
+      display: block;
+      outline: none;
+      border: none;
+      padding: 5px 10px; }
+    #feed-posts #post-form-div #new-post-form #postBtn {
+      margin-top: 7px;
+      outline: none;
+      background-color: white;
+      font-size: 1rem;
+      border-radius: 4px;
+      padding: 1px 6px; }
+    #feed-posts #post-form-div #new-post-form #postBtn:hover {
+      background-color: #eeeefc; }
+  #feed-posts #recent-posts-heading {
+    width: 100%;
+    height: 54px;
+    margin-top: 1rem;
+    padding-left: 1.4rem; }
+    #feed-posts #recent-posts-heading span {
+      display: inline-block;
+      font-size: 1.7rem;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif; }
