@@ -1,24 +1,23 @@
 #home-container {
   border: 2px solid grey;
   border-radius: 5px;
-  height: 95vh;
+  min-height: 87vh;
   margin: auto;
   width: 98.7%;
   display: flex;
   justify-content: space-around;
-  margin-top: 6rem;
-  margin-bottom: 1rem;
+  margin-top: 5.7rem;
+  margin-bottom: 65px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); }
   #home-container #dashboard-div {
-    height: 100%;
+    height: auto;
     width: 22%;
     border-radius: 4px 0 0 4px;
     border-right: 2px solid #b9b9b9; }
   #home-container #feed-posts {
-    height: 100%;
-    width: 55%; }
+    width: 55%;
+    max-height: 93vh; }
   #home-container #display-users-div {
-    height: 100%;
     width: 23%;
     border-radius: 0px 4px 4px 0px; }
 
@@ -124,7 +123,8 @@
         #display-users-div #friends-div #friends-list-div .user-friend-div a {
           display: inline-block;
           font-size: 1.3rem;
-          padding-left: 20px; }
+          padding-left: 20px;
+          color: black; }
   #display-users-div #non-friends-div {
     width: 100%;
     height: 50%; }
@@ -161,12 +161,12 @@
   overflow: scroll; }
   #feed-posts #post-now-heading {
     width: 100%;
-    height: 66px;
+    height: 55px;
     margin-top: 2.7rem;
     padding-left: 1.4rem; }
     #feed-posts #post-now-heading span {
       display: inline-block;
-      font-size: 2.4rem;
+      font-size: 1.9rem;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif; }
   #feed-posts #post-form-div {
@@ -179,21 +179,34 @@
       border: none;
       padding: 5px 10px; }
     #feed-posts #post-form-div #new-post-form #postBtn {
-      margin-top: 7px;
+      margin-top: 5px;
       outline: none;
       background-color: white;
-      font-size: 1rem;
-      border-radius: 4px;
-      padding: 1px 6px; }
+      border-radius: 4px; }
     #feed-posts #post-form-div #new-post-form #postBtn:hover {
-      background-color: #eeeefc; }
+      background-color: #f0f1f5; }
   #feed-posts #recent-posts-heading {
     width: 100%;
-    height: 54px;
+    height: 45px;
     margin-top: 1rem;
     padding-left: 1.4rem; }
     #feed-posts #recent-posts-heading span {
       display: inline-block;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif; }
+  #feed-posts #posts-list-container li .post-comments {
+    max-height: 250px;
+    overflow-y: scroll; }
+    #feed-posts #posts-list-container li .post-comments form .comment-input {
+      outline: none;
+      border: none;
+      font-size: 0.75rem;
+      padding: 2px 4px; }
+    #feed-posts #posts-list-container li .post-comments form #commentBtn {
+      font-size: 0.75rem;
+      border-radius: 4px;
+      outline: none;
+      background-color: white; }
+    #feed-posts #posts-list-container li .post-comments form #commentBtn:hover {
+      background-color: #f0f1f5; }
