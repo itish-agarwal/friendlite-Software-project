@@ -8,15 +8,15 @@
   justify-content: space-around;
   margin-top: 5.7rem;
   margin-bottom: 65px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%); }
   #home-container #dashboard-div {
-    height: auto;
     width: 22%;
     border-radius: 4px 0 0 4px;
     border-right: 2px solid #b9b9b9; }
   #home-container #feed-posts {
     width: 55%;
-    max-height: 93vh; }
+    max-height: 95vh; }
   #home-container #display-users-div {
     width: 23%;
     border-radius: 0px 4px 4px 0px; }
@@ -25,7 +25,7 @@
   background-color: #08AEEA;
   background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0); }
   #dashboard-div #me-container {
-    height: 350px;
+    height: 300px;
     width: 80%;
     margin: auto;
     margin-top: 2.4rem;
@@ -158,7 +158,8 @@
 #feed-posts {
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
-  overflow: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
   #feed-posts #post-now-heading {
     width: 100%;
     height: 55px;

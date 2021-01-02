@@ -1,6 +1,6 @@
 
 #home-container {
-    // background-color: red;
+
     border: 2px solid grey;
     border-radius: 5px;
     min-height: 87vh;
@@ -11,18 +11,19 @@
     margin-top: 5.7rem;
     margin-bottom: 65px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
     
     #dashboard-div {
-        height: auto;
+        // height: 90%;
         width: 22%;
         border-radius: 4px 0 0 4px;
-        // background-image: linear-gradient(-120deg, #e7ebec, #d0d9e0, #98a3a6);
         border-right: 2px solid rgb(185, 185, 185);
     }
 
-    #feed-posts {        
+    #feed-posts {       
         width: 55%;
-        max-height: 93vh;
+        // min-height: 90vh;
+        max-height: 95vh;
     }
 
     #display-users-div {
@@ -38,7 +39,7 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
 
 
     #me-container {
-        height: 350px;
+        height: 300px;
         width: 80%;
         margin: auto;
         margin-top:2.4rem;
@@ -89,7 +90,6 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
         width: 80%;
         height: 400px;
         margin: auto;
-        // background-color: magenta;
 
         .a-tag-link {
             display: flex;
@@ -135,9 +135,8 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
 
 //user friends
 #display-users-div {
-    // background-image: linear-gradient(-120deg, #b2bdc1, #d0d9e0, #e7ebec);
     background-color: #21D4FD;
-background-image: linear-gradient(19deg, #21D4FD 0%, #cc7af1 100%);
+    background-image: linear-gradient(19deg, #21D4FD 0%, #cc7af1 100%);
 
     padding-top: 3.4rem;
     border-radius: 0 7px 7px 0;
@@ -225,7 +224,8 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #cc7af1 100%);
 
     background-color: #FA8BFF;
 background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
-overflow: scroll;
+overflow-y: scroll;
+overflow-x: hidden;
 
     #post-now-heading {
         width: 100%;
