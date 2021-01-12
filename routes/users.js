@@ -56,5 +56,8 @@ router.get('/auth/google/callback', passport.authenticate('google', {
 //friend request
 router.get('/friend-request', usersController.toggleFriendship);
 
+//get user posts
+router.get('/posts/:id', passport.checkAuthentication, usersController.getUserPosts);
+
 
 module.exports = router;

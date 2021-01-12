@@ -1,7 +1,6 @@
 
 
-<link rel="stylesheet" href="/css/user_profile.css">
-<link rel="stylesheet" href="/css/chat_box.css">
+<link rel="stylesheet" href="/css/one_user_posts.css">
 
 <div id="body-container">
     <div id="dashboard-div">
@@ -43,8 +42,9 @@
             </a>
           </div>
 
+
           <div class="item">
-            <a href="/users/posts/<%= locals.user._id %>" class="a-tag-link">
+            <a href="/users/posts/<%=locals.user.id%>" class="a-tag-link active">
               <div class="icon-div">
                 <i class="fas fa-envelope-open">
 
@@ -75,7 +75,7 @@
           </div>
 
           <div class="item">
-            <a href="/users/profile/<%=locals.user.id%>" class="a-tag-link active">
+            <a href="/users/profile/<%=locals.user.id%>" class="a-tag-link">
               <div class="icon-div">
                 <i class ="fas fa-address-card">
 
@@ -106,59 +106,71 @@
         </div>
     </div>
 
-    <div id="profile-container">
-        <div id="profile-pic-container">
-            <img src="<%=profile_user.avatar%>">
+    <div id="user-posts-container">
+
+        <div id="user-posts-heading">
+          <span>
+            <%= post_user.name %>'s Posts
+          </span>
         </div>
 
-        <div id="name-container">
-            <span>
-                <%= profile_user.name %>
-            </span>
+        <div id="posts-list-container">
+          <ul>             
+            <% for(post of all_posts) { %> 
+              <% if(post.user == post_user.id) { %>
+                <li>    
+
+                  <div class="post-content-div">
+                    <div class="post-content">
+                      <%= post.content %>
+                    </div>                    
+                    <div class="likes-div">
+                      <a class="toggle-like-button" data-likes="post.likes.length" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+                        <i class="fas fa-thumbs-up"></i>
+                        <small>
+                          <%= post.likes.length %>
+                        </small>
+                      </a>
+                    </div>
+                  </div>
+
+
+                  <% if((locals.user) && (locals.user.id == post_user.id)) { %>
+                    <div class="delete-post-div">
+                      <small>
+                        <%= post.createdAt %>
+                      </small>
+                      <small>
+                        <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
+                            Delete
+                        </a>
+                      </small>
+                    </div>
+                  <% } %>
+                  
+                 
+                </li>
+              <% } %>
+            <% } %>          
+          </ul>
+
         </div>
 
-        <div id="email-container">
-            <span>
-                <%= profile_user.email %>
-            </span>
-        </div>
 
-        <% if(locals.user.id != profile_user.id) { %>
-            <div id="add-friend-container">
-                <a href="/users/friend-request/?to_user=<%=profile_user._id%>&type=<%=shouldAdd%>">
-                    <% if(shouldAdd=="Add") { %>
-                        <i class="fas fa-plus-circle"></i>
-                        Add friend
-                    <% } else { %>
-                        <i class="fas fa-minus-circle"></i>
-                        Remove friend
-                    <% } %>
-                </a>
-            </div>
-            <div id="user-posts-link-div">
-              <a href="/users/posts/<%= profile_user._id %>">
-                Posts by <%= profile_user.name %>
-              </a>
-            </div>   
-            <%- include('_chat_box') %>  
-        <% } else { %>
-            <div id="form-container">
-                <form action="/users/update/<%=locals.user.id%>" enctype="multipart/form-data" method="POST">
-                    <input type="text" name="name" placeholder="Your name" value="<%=locals.user.name%>" required>
-                    <input type="email" name="email" placeholder="Your email" value="<%=locals.user.email%>" required>
-                    <input type="file" name="avatar" placeholder="Profile Picture">
-                    <input type="submit" value="Update">
-                </form>
-            </div>
-        <% } %>
     </div>
 </div>
+
+<script src="/js/home_post_comments.js"></script>
+<script src="/js/home_posts.js"></script>
+
+<script src="/js/toggle_likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function() {
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
 <script src="/js/chat_engine.js"></script>
 
-<% if(locals.user) { %>
-    <script>
-        new ChatEngine('user-chat-box', '<%=locals.user.id%>', '<%=profile_user.id%>');
-    </script>
-<% } %> 

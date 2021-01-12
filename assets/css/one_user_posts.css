@@ -1,0 +1,132 @@
+#body-container {
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 98.7%;
+  height: 87vh;
+  margin: auto;
+  margin-top: 5.7rem;
+  margin-bottom: 65px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around; }
+  #body-container #dashboard-div {
+    height: 100%;
+    width: 22.5%;
+    border-radius: 5px 0 0 5px;
+    border-right: 3px solid #b9b9b9; }
+  #body-container #user-posts-container {
+    background-image: linear-gradient(-45deg, #f09ea8, #bbddf0, #f5a6af);
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 70px; }
+
+#dashboard-div {
+  background-color: #08AEEA;
+  background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0); }
+  #dashboard-div #me-container {
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    margin-top: 2.4rem;
+    text-align: center;
+    padding: 40px 0 0 0; }
+    #dashboard-div #me-container #dp-container {
+      width: 150px;
+      height: 150px;
+      margin: auto; }
+      #dashboard-div #me-container #dp-container img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%; }
+    #dashboard-div #me-container #name-container {
+      padding: 20px; }
+      #dashboard-div #me-container #name-container span {
+        display: inline-block;
+        font-size: 1.5rem; }
+        #dashboard-div #me-container #name-container span a {
+          color: #424040; }
+        #dashboard-div #me-container #name-container span a:hover {
+          color: black; }
+  #dashboard-div #menu-name-container {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-bottom: 0.6rem; }
+    #dashboard-div #menu-name-container span {
+      font-size: 1.5rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  #dashboard-div #menu-div {
+    width: 80%;
+    height: 400px;
+    margin: auto; }
+    #dashboard-div #menu-div .a-tag-link {
+      display: flex;
+      height: 50px;
+      width: 100%;
+      color: #494646;
+      padding-left: 2px;
+      justify-content: space-around; }
+      #dashboard-div #menu-div .a-tag-link .icon-div {
+        height: 100%;
+        width: 16%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #dashboard-div #menu-div .a-tag-link .icon-div i {
+          display: inline-block;
+          font-size: 1.36rem; }
+      #dashboard-div #menu-div .a-tag-link .actual-option {
+        height: 100%;
+        width: 82%;
+        display: flex;
+        align-items: center; }
+        #dashboard-div #menu-div .a-tag-link .actual-option span {
+          display: inline-block;
+          padding-left: 4px;
+          width: 100%;
+          font-size: 1.1rem; }
+    #dashboard-div #menu-div .active {
+      color: #3535f3; }
+    #dashboard-div #menu-div .a-tag-link:hover {
+      color: black; }
+
+#user-posts-container #user-posts-heading {
+  width: 100%;
+  height: 45px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  padding-left: 1.4rem; }
+  #user-posts-container #user-posts-heading span {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; }
+
+#user-posts-container #posts-list-container ul li {
+  display: flex;
+  width: 80%;
+  border-bottom: 1px solid grey;
+  padding: 10px 0 10px 2px; }
+  #user-posts-container #posts-list-container ul li .post-content-div {
+    display: flex;
+    width: 83%;
+    justify-content: space-between; }
+    #user-posts-container #posts-list-container ul li .post-content-div .post-content {
+      width: 92%;
+      font-size: 1.13rem;
+      font-weight: 500; }
+    #user-posts-container #posts-list-container ul li .post-content-div .likes-div {
+      width: 12%; }
+      #user-posts-container #posts-list-container ul li .post-content-div .likes-div i {
+        color: #1877f2; }
+      #user-posts-container #posts-list-container ul li .post-content-div .likes-div small {
+        font-size: 0.87rem;
+        color: #423f3f; }
+  #user-posts-container #posts-list-container ul li .delete-post-div small {
+    display: block; }
+    #user-posts-container #posts-list-container ul li .delete-post-div small a {
+      font-size: 0.82rem;
+      color: #6e6ecc; }
+    #user-posts-container #posts-list-container ul li .delete-post-div small a:hover {
+      color: #0000a3; }

@@ -12,6 +12,8 @@ const Friendship = require('../models/friendship');
 
 const Message = require('../models/message');
 const { version } = require('os');
+const { post } = require('../routes/users');
+const Post = require('../models/post');
 
 let T = 400;
 
@@ -394,4 +396,18 @@ module.exports.toggleFriendship = async function(req, res) {
     setTimeout(function() {
         return res. redirect('back');
     }, T+300);    
+}
+
+//get all posts of a user
+module.exports.getUserPosts = async function(req, res) {
+    let postUserId = req.params.id;
+    if(!req.user) {
+        return res.redirect('back');
+    }
+    let user = await User.findById(postUserId);
+    let posts = await Post.find({}).sort('-createdAt');
+    return res.render('one_user_posts', {
+        post_user: user,
+        all_posts: posts
+    });
 }
