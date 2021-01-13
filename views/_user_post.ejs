@@ -22,11 +22,13 @@
                     <div class="comment-content-div">
                       <small style="font-weight: bold;"> > </small> <%= comment.content %>
                     </div>
-                    <div class="delete-comment-div">
-                      <a href="/comments/destroy/<%=comment._id%>">
-                        <i class="fas fa-times-circle"></i>
-                      </a>
-                    </div>
+                    <% if((locals.user) && ((locals.user.id == comment.user.id)||(locals.user.id == post.user.id))) { %>
+                      <div class="delete-comment-div">
+                        <a href="/comments/destroy/<%=comment._id%>">
+                          <i class="fas fa-times-circle"></i>
+                        </a>
+                      </div>
+                    <% } %>
                   </div>
                     
                   <div class="comment-user-name">
