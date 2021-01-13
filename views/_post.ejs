@@ -8,9 +8,9 @@
         </small>
         <% if((locals.user) && (locals.user.id == post.user.id)) { %>
             <br>
-            <small>
+            <small class="delete-small">
                 <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
-                    Delete
+                    Remove <i class="fas fa-times-circle"></i>
                 </a>
             </small>
         <% } %>

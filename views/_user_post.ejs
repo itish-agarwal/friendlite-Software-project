@@ -1,0 +1,67 @@
+<li>  
+    <div class="post-div">
+
+
+      <div class="post-content" class="contains post + comments">     
+        <div class="post-content-div" class="contains icon + post.content">
+          <div class="post-icon-div">
+            
+          </div>
+          <span style="font-weight: bold;"> => </span><%= post.content %>
+        </div>
+
+        <div class="comments-heading">
+            Comments
+        </div>
+
+        <div class="comments-container">
+        <ul class="comments-ul">
+            <% for(comment of post.comments) { %>
+                <li style="border-bottom: none;">
+                  <div class="comment-div">
+                    <div class="comment-content-div">
+                      <small style="font-weight: bold;"> > </small> <%= comment.content %>
+                    </div>
+                    <div class="delete-comment-div">
+                      <a href="/comments/destroy/<%=comment._id%>">
+                        <i class="fas fa-times-circle"></i>
+                      </a>
+                    </div>
+                  </div>
+                    
+                  <div class="comment-user-name">
+                    <small> By </small>
+                    <a href="/users/profile/<%=comment.user._id%>">
+                      <%= comment.user.name %>
+                    </a>
+                  </div>
+                </li>
+            <% } %>
+        </ul>
+        </div>
+      </div>  
+      
+      
+      
+      <div class="likes-div">
+        <a class="toggle-like-button" data-likes="<%=post.likes.length%>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+          <i class="fas fa-thumbs-up"></i>
+          <%= post.likes.length %>
+        </a>
+      </div>
+
+    </div>
+
+    <% if((locals.user) && (locals.user.id == post_user.id)) { %>
+      <div class="delete-post-div">
+        <small>
+          <%= post.createdAt %>
+        </small>
+        <small>
+          <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
+              Remove post <i class="fas fa-times-circle"></i>
+          </a>
+        </small>
+      </div>
+    <% } %>
+  </li>

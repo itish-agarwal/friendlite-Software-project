@@ -398,16 +398,42 @@ module.exports.toggleFriendship = async function(req, res) {
     }, T+300);    
 }
 
-//get all posts of a user
+//get all posts of a user -> one_user_post.ejs
 module.exports.getUserPosts = async function(req, res) {
-    let postUserId = req.params.id;
-    if(!req.user) {
-        return res.redirect('back');
+
+    try {
+        let postUserId = req.params.id;
+        if(!req.user) {
+            return res.redirect('back');
+        }
+        let user = await User.findById(postUserId);
+        let posts = await Post.find({})
+        .sort('-createdAt') //sort according to time
+        .populate('user')
+        .populate({
+            path: 'comments',
+            populate: {
+                path: 'user'
+            },  //('comments' is a property of post)
+            populate: {
+                path: 'likes'
+            }
+        }).populate('comments')
+        .populate('likes');         
+        
+        for(p of posts ){
+            for(comment of p.comments) {
+                comment = await comment.populate('user', 'name email').execPopulate();
+            }
+            p.comments.reverse(); 
+        }
+
+
+        return res.render('one_user_posts', {
+            post_user: user,
+            all_posts: posts
+        });
+    }catch(err) {
+        console.log(err);
     }
-    let user = await User.findById(postUserId);
-    let posts = await Post.find({}).sort('-createdAt');
-    return res.render('one_user_posts', {
-        post_user: user,
-        all_posts: posts
-    });
 }

@@ -58,7 +58,6 @@ module.exports.home = async function(req, res) {
                         isFriend = 1;
                     } 
                 }
-                // console.log("DDDDDDDDDDDDDDDDDDDDDDDDDD ", user.id);
                 if(isFriend) {
                     all_friends.push(user);
                 } else {

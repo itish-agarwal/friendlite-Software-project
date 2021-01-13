@@ -40,14 +40,12 @@ module.exports.create = async function(req, res){
             
 
             if(req.xhr) {               
-                setTimeout(function() {
-                    return res.status(200).json({
-                        data: {
-                            comment: comment
-                        },
-                        message: "Comment created"
-                    });
-                }, T+75);              
+                return res.status(200).json({
+                    data: {
+                        comment: comment
+                    },
+                    message: "Comment created"
+                });            
             }
         } else {
             return res.redirect('/');
@@ -76,15 +74,16 @@ module.exports.destroy = async function(req, res) {
             await Like.deleteMany({likeable: comment._id, onModel: 'comment'});
 
             if(req.xhr) {
-                setTimeout(function() {
-                    return res.status(200).json({
-                        data: {
-                            comment_id: req.params.id
-                        },
-                        message: "Comment deleted"
-                    });
-                }, T+80);
+                return res.status(200).json({
+                    data: {
+                        comment_id: req.params.id
+                    },
+                    message: "Comment deleted"
+                });
             }
+
+            req.flash('Comment deleted');
+            return res.redirect('back');
 
         } else {
             return res.redirect('back');

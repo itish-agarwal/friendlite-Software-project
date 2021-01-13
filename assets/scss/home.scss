@@ -22,7 +22,6 @@
 
     #feed-posts {       
         width: 55%;
-        // min-height: 90vh;
         max-height: 95vh;
     }
 
@@ -280,7 +279,13 @@ overflow-x: hidden;
     }
 
     #posts-list-container {
-        li {
+        li {    
+            .delete-post-button {
+                font-size: 0.9rem;
+            }
+            .delete-post-button:hover {
+                color: rgb(87, 87, 87);
+            }
             .post-comments {
                 max-height: 250px;
                 overflow-y: scroll;

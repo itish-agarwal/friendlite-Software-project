@@ -117,53 +117,19 @@
         <div id="posts-list-container">
           <ul>             
             <% for(post of all_posts) { %> 
-              <% if(post.user == post_user.id) { %>
-                <li>    
-
-                  <div class="post-content-div">
-                    <div class="post-content">
-                      <%= post.content %>
-                    </div>                    
-                    <div class="likes-div">
-                      <a class="toggle-like-button" data-likes="post.likes.length" href="/likes/toggle/?id=<%=post._id%>&type=Post">
-                        <i class="fas fa-thumbs-up"></i>
-                        <small>
-                          <%= post.likes.length %>
-                        </small>
-                      </a>
-                    </div>
-                  </div>
-
-
-                  <% if((locals.user) && (locals.user.id == post_user.id)) { %>
-                    <div class="delete-post-div">
-                      <small>
-                        <%= post.createdAt %>
-                      </small>
-                      <small>
-                        <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
-                            Delete
-                        </a>
-                      </small>
-                    </div>
-                  <% } %>
-                  
-                 
-                </li>
+              <% if(post.user._id == post_user.id) { %>
+                <%- include('_user_post') %>
               <% } %>
             <% } %>          
           </ul>
 
         </div>
 
-
     </div>
 </div>
 
-<script src="/js/home_post_comments.js"></script>
-<script src="/js/home_posts.js"></script>
 
-<script src="/js/toggle_likes.js"></script>
+<script src="/js/toggle_likes_post.js"></script>
 <script>
     $('.toggle-like-button').each(function() {
         let self = this;
@@ -171,6 +137,4 @@
     });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
-<script src="/js/chat_engine.js"></script>
 
