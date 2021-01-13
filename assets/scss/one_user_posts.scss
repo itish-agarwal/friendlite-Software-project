@@ -25,7 +25,7 @@
         width: 80%;
         overflow-y: scroll;
         overflow-x: hidden;
-        padding-bottom: 50px;
+        padding-bottom: 5px;
     }
 }
 
@@ -152,7 +152,7 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
             li {
                 display: flex;
                 width: 93%;
-                border-bottom: 1px solid grey;
+                border-bottom: 1.2px solid grey;
                 padding: 10px 4px 0 10px;
                 .post-div {
                     display: flex;
@@ -172,9 +172,14 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
                         .comments-container {
                             .comments-ul {
                                 padding-top: 2px;
-                                margin-left: 1.1rem;
+                                margin-left: 0.9rem;
+                                max-height: 200px;
+                                overflow-y: scroll;
                                 li {
+                                    border-left: 2px solid white;
+                                    border-bottom: 1px solid white;
                                     padding-top: 5px;
+                                    padding-bottom: 4px;
                                     display: block;
                                     .comment-div {
                                         display: flex;
@@ -182,7 +187,7 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
                                         padding-right: 20px;
                                         .delete-comment-div {
                                             display: flex;
-                                            width: 80px;
+                                            width: 10px;
                                             justify-content: space-between;
                                             a {
                                                 font-size: 0.9rem;

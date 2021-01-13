@@ -17,7 +17,7 @@
         <div class="comments-container">
         <ul class="comments-ul">
             <% for(comment of post.comments) { %>
-                <li style="border-bottom: none;">
+                <li>
                   <div class="comment-div">
                     <div class="comment-content-div">
                       <small style="font-weight: bold;"> > </small> <%= comment.content %>
@@ -44,7 +44,6 @@
       </div>  
       
       
-      
       <div class="likes-div">
         <a class="toggle-like-button" data-likes="<%=post.likes.length%>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
           <i class="fas fa-thumbs-up"></i>
@@ -54,11 +53,12 @@
 
     </div>
 
-    <% if((locals.user) && (locals.user.id == post_user.id)) { %>
+
       <div class="delete-post-div">
         <small>
           <%= post.createdAt %>
         </small>
+        <% if((locals.user) && (locals.user.id == post_user.id)) { %>
         <small>
           <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
               Remove post <i class="fas fa-times-circle"></i>

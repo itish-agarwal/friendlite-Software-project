@@ -21,7 +21,7 @@
     width: 80%;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 50px; }
+    padding-bottom: 5px; }
 
 #dashboard-div {
   background-color: #08AEEA;
@@ -112,7 +112,7 @@
   #user-posts-container #posts-list-container ul li {
     display: flex;
     width: 93%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1.2px solid grey;
     padding: 10px 4px 0 10px; }
     #user-posts-container #posts-list-container ul li .post-div {
       display: flex;
@@ -130,9 +130,14 @@
           font-size: 1rem; }
         #user-posts-container #posts-list-container ul li .post-div .post-content .comments-container .comments-ul {
           padding-top: 2px;
-          margin-left: 1.1rem; }
+          margin-left: 0.9rem;
+          max-height: 200px;
+          overflow-y: scroll; }
           #user-posts-container #posts-list-container ul li .post-div .post-content .comments-container .comments-ul li {
+            border-left: 2px solid white;
+            border-bottom: 1px solid white;
             padding-top: 5px;
+            padding-bottom: 4px;
             display: block; }
             #user-posts-container #posts-list-container ul li .post-div .post-content .comments-container .comments-ul li .comment-div {
               display: flex;
@@ -140,7 +145,7 @@
               padding-right: 20px; }
               #user-posts-container #posts-list-container ul li .post-div .post-content .comments-container .comments-ul li .comment-div .delete-comment-div {
                 display: flex;
-                width: 80px;
+                width: 10px;
                 justify-content: space-between; }
                 #user-posts-container #posts-list-container ul li .post-div .post-content .comments-container .comments-ul li .comment-div .delete-comment-div a {
                   font-size: 0.9rem;

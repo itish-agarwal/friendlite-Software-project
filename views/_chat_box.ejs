@@ -12,7 +12,6 @@
                     <a class="delete-message-button" href="/messages/destroy/<%=message.id%>">
                         <i class="fas fa-trash"></i>
                     </a>
-                    <!-- <p > <%= message.time %> </p> -->
                 </li>
             <% } %>
         <% } %>
@@ -20,6 +19,9 @@
 
     <div id="chat-message-input-container">
         <input id="chat-message-input" placeholder="Type here.....">
-        <button id="send-message"> Send </button>
+        <div id="buttons-div">
+            <button id="send-message"> Send </button>
+            <a href="/messages/destroy-all/?from_user=<%=locals.user._id%>&to_user=<%=profile_user._id%>" class="button" id="delete-all-messages"> <small> Delete all </small></button>
+        </div>
     </div>
 </div>
