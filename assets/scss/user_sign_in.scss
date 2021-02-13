@@ -2,15 +2,15 @@
 #form-container {
   width: 660px;
   height: 290px;
-
+  background: url("/images/background13.jpg") top center;
   margin-top: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .2);
+  border: 2px solid grey;
 }
 
 #sign-up-form {
     display: block;
-    /*background-color: cyan;*/
     padding-top: 15px;
 }
 

@@ -3,9 +3,9 @@
   --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
-  background: #fff;
+  background: url("/images/background16.jpg") top center;
   z-index: 997;
-  padding: 15px 0;
+  padding: 3px 0;
   border-bottom: 2px solid #7b7c7e; }
 
 #header.header-scrolled {
@@ -52,10 +52,10 @@
 .nav-menu a {
   display: block;
   position: relative;
-  color: #124265;
+  color: black;
   transition: 0.3s;
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif; }
+  font-size: 17px;
+  font-family: monospace; }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #2487ce; }

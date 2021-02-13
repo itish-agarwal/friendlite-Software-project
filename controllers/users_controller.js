@@ -139,7 +139,7 @@ module.exports.signUp = function(req, res) {
     }
     setTimeout(function() {
         return res.render('user_sign_up', {
-            title: "Codieal | Sign Up",
+            title: "friendlite | Sign Up",
             back: '/'
         });
     }, T+90);
@@ -151,7 +151,7 @@ module.exports.signIn = function(req, res) {
         return res.redirect('/');
     }
     return res.render('user_sign_in', {
-        title: "Codeial | Sign In",
+        title: "friendlite | Sign In",
         back: '/'
     });
 }

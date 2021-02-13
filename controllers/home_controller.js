@@ -67,7 +67,7 @@ module.exports.home = async function(req, res) {
         }
 
         return res.render('home', {
-            title: "Codeial | Home",
+            title: "friendlite | Home",
             back: '/',
             posts: posts,
             all_friends: all_friends,
