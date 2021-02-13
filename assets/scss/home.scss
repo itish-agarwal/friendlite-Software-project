@@ -1,20 +1,19 @@
 
 #home-container {
 
-    border: 2px solid grey;
-    border-radius: 5px;
-    min-height: 87vh;
+    // border: 2px solid grey;
+    // border-radius: 5px;
+    // min-height: 87vh;
     margin: auto;
-    width: 98.7%; 
+    // width: 98.7%; 
     display: flex;
     justify-content: space-around;
-    margin-top: 5.7rem;
-    margin-bottom: 65px;
+    margin-top: 3.4rem;
+    margin-bottom: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
     
     #dashboard-div {
-        // height: 90%;
         width: 22%;
         border-radius: 4px 0 0 4px;
         border-right: 2px solid rgb(185, 185, 185);
@@ -222,7 +221,8 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
 #feed-posts {
 
     background-color: #FA8BFF;
-background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
+// background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%);
+background: url("/images/background22.jpg");
 overflow-y: scroll;
 overflow-x: hidden;
 

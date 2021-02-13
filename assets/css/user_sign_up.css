@@ -2,6 +2,7 @@
 #form-container {
   width: 660px;
   height: 340px;
+  background: url("/images/background18.jpg") top center;
   margin-top: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2); }
