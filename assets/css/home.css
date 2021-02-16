@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 3.4rem;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(45deg, #eac6ec 0%, #caecf5 52%, #acf3cb 90%); }
   #home-container #dashboard-div {
@@ -94,7 +94,9 @@
   border-radius: 0 7px 7px 0; }
   #display-users-div #friends-div {
     width: 100%;
-    height: 50%; }
+    height: 50%;
+    overflow-y: scroll;
+    overflow-x: hidden; }
     #display-users-div #friends-div #heading-friends {
       height: 50px;
       width: 100%;
@@ -123,7 +125,9 @@
           color: black; }
   #display-users-div #non-friends-div {
     width: 100%;
-    height: 50%; }
+    height: 50%;
+    overflow-y: scroll;
+    overflow-x: hidden; }
     #display-users-div #non-friends-div #heading-non-friends {
       height: 50px;
       width: 100%;
