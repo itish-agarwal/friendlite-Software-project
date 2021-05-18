@@ -3,7 +3,7 @@
 
     // border: 2px solid grey;
     // border-radius: 5px;
-    // min-height: 87vh;
+    min-height: 95vh;
     margin: auto;
     // width: 98.7%; 
     display: flex;
@@ -19,7 +19,8 @@
         border-right: 2px solid rgb(185, 185, 185);
     }
 
-    #feed-posts {       
+    #feed-posts {    
+        min-height: 95vh;   
         width: 55%;
         max-height: 95vh;
     }
@@ -33,7 +34,9 @@
 
 #dashboard-div {
     background-color: #08AEEA;
-background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
+    // background-image: linear-gradient(-45deg, #063242, #3b67b8, #082733);
+    background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
+// background-image: url('/images/background5.jpg');
 
 
     #me-container {
@@ -46,15 +49,15 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
         // background-color: red;
 
         #dp-container {
-            width: 150px;
-            height: 150px;
+            width: 155px;
+            height: 160px;
             margin: auto;
-
             img {
                 height: 100%;
                 width: 100%;
                 border-radius: 50%;
-            }
+                border: 2px solid grey;
+            }   
         }
 
         #name-container {
@@ -93,7 +96,7 @@ background-image: linear-gradient(-45deg, #c0e3f0, #b5fadb, #c0e3f0);
             display: flex;
             height: 50px;
             width: 100%;
-            color: rgb(73, 70, 70);
+            color: black;
             padding-left: 2px;
             justify-content: space-around;
 

@@ -365,7 +365,7 @@ module.exports.toggleFriendship = async function(req, res) {
             });
             User.findById(to_user, function(err, user) {
                 user.friendships.push(friendship);
-                // console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX - ", user.name);
+                
                 friendName = user.name;
                 user.save();
             });            

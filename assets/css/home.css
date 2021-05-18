@@ -1,4 +1,5 @@
 #home-container {
+  min-height: 95vh;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -11,6 +12,7 @@
     border-radius: 4px 0 0 4px;
     border-right: 2px solid #b9b9b9; }
   #home-container #feed-posts {
+    min-height: 95vh;
     width: 55%;
     max-height: 95vh; }
   #home-container #display-users-div {
@@ -28,13 +30,14 @@
     text-align: center;
     padding: 40px 0 0 0; }
     #dashboard-div #me-container #dp-container {
-      width: 150px;
-      height: 150px;
+      width: 155px;
+      height: 160px;
       margin: auto; }
       #dashboard-div #me-container #dp-container img {
         height: 100%;
         width: 100%;
-        border-radius: 50%; }
+        border-radius: 50%;
+        border: 2px solid grey; }
     #dashboard-div #me-container #name-container {
       padding: 20px; }
       #dashboard-div #me-container #name-container span {
@@ -60,7 +63,7 @@
       display: flex;
       height: 50px;
       width: 100%;
-      color: #494646;
+      color: black;
       padding-left: 2px;
       justify-content: space-around; }
       #dashboard-div #menu-div .a-tag-link .icon-div {
