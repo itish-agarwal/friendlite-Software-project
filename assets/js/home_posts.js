@@ -57,7 +57,7 @@
                         <br>
                         <small>
                             <a class="delete-post-button" href="/posts/destroy/${post._id}">
-                                Delete
+                                Remove <i class="fas fa-times-circle"></i>
                             </a>
                         </small>
 
